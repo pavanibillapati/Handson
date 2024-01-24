@@ -1,0 +1,41 @@
+1) Write a query to select all columns from a table named 'Customers'.
+	Select * from customers
+
+2) Write a query to find all distinct values in the 'status' column from the 'Orders' table.
+	Select distinct(status) from Orders
+
+3) From the 'Employees' table, select the first name, last name, and date of birth of all employees.
+Select first name, last name, date of birth from Employees
+
+4) Write a SQL query to find the total number of entries in the 'Products' table.
+	Select count(*) from Products
+5) Select the top 10 highest priced products from the 'Products' table.
+	Select * from Products order by Price desc limit 10
+
+6) Write a query to list all customers' names and their corresponding order counts from the 'Orders' table.
+	Select customer_name, count(order_id) from Orders group by customer_name 
+
+7) From the 'Employees' table, write a query to find employees who joined the company after 2020.
+
+	Select first name, last name from Employees where Joining_date > ’01-01-2020’
+
+8) Write a SQL query to find all products with a price between 50 and 100.
+	Select product_names from Products where price between 50 and 100
+
+9) From the 'Orders' table, select orders placed in the last 7 days.
+	Select * from Orders where order_date between ’01-17-2024’ and ’01-23-2024’
+
+10) Write a query to count the number of distinct customers who have placed orders.
+	Select count(distinct(customer_name)) from Orders
+
+11) From the 'Products' table, write a query to display products sorted by price in descending order.
+	Select product_name from Products order by Price desc 
+12) Write a query to find the average price of all products in the 'Products' table.
+	Select avg(price) from Products
+13) Select all employees from the 'Employees' table who do not have a manager.
+	Select first_name, last_name from Employees where manager_id IS NULL
+14) Write a SQL query to list all orders that have not yet been shipped.
+	Select * from orders where ship_date IS NULL
+15) From the 'Customers' table, write a query to find all customers who live in 'New York' or 'Los Angeles'.
+	Select customer_name from customers where city = 'New York' or city = 'Los Angeles'.
+
